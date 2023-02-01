@@ -16,8 +16,8 @@ public class osuUserPercentileFinder
     public static void main(String[] args) throws IOException // Throwing it seems like the way to go for file creation. Please tell me if there's another way. :<
     {
         JOptionPane.showMessageDialog(null, "Welcome to Tomy's Percentile Finder!");
-        JOptionPane.showMessageDialog(null, "mxkvl (max osu) gave me the idea to do this" +
-                "\nand perhaps it could inspire Ephemeral to continue looking into this, hopefully, please...?");
+        JOptionPane.showMessageDialog(null, "Tax Evasion formerly known as mxkvl gave me the idea to do this" +
+                "\nand perhaps it could inspire Ephemeral and/or more of the osu! team to continue looking into this, hopefully, please...?");
 
         int ranking = 0;
         String mode;
