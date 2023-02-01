@@ -20,14 +20,21 @@ public class osuUserPercentileFinder
                 "\nand perhaps it could inspire Ephemeral and/or more of the osu! team to continue looking into this, hopefully, please...?");
 
         int ranking = 0;
-        String mode;
+        String mode = "";
 
         URL currentURL;
 
-        do
+        try
         {
-            mode = JOptionPane.showInputDialog("Enter o for osu!, t for Taiko, m for Mania, or c for Catch The Beats.");
-        } while (!checkMode(mode));
+            do
+            {
+                mode = JOptionPane.showInputDialog("Enter o for osu!, t for Taiko, m for Mania, or c for Catch The Beats.");
+            } while (!checkMode(mode));
+        } catch (NullPointerException e)
+        {
+            JOptionPane.showMessageDialog(null, "No mode was entered. (Perhaps you closed the program with no input.) The program will now close.");
+            System.exit(0);
+        }
         mode = switch (mode)
                 {
                     case "o" -> "osu";
