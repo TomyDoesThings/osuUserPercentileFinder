@@ -36,7 +36,7 @@ public class osuUserPercentileFinder
             System.exit(0);
         }
 
-        switch (mode) // I "switched" it to make it compatible with Java 8. Sorry that it can't be as clean.
+        switch (mode) // I *switched* it to make it compatible with Java 8. Sorry that it can't be as clean.
         {
             case "o":
                 mode = "osu";
