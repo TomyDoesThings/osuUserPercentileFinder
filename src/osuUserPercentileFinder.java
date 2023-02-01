@@ -32,16 +32,24 @@ public class osuUserPercentileFinder
             } while (!checkMode(mode));
         } catch (NullPointerException e)
         {
-            JOptionPane.showMessageDialog(null, "No mode was entered. (Perhaps you closed the program with no input.) The program will now close.");
+            JOptionPane.showMessageDialog(null, "No mode was entered. The program will now close.");
             System.exit(0);
         }
-        mode = switch (mode)
-                {
-                    case "o" -> "osu";
-                    case "t" -> "taiko";
-                    case "c" -> "fruits";
-                    default -> "mania";
-                };
+
+        switch (mode) // I "switched" it to make it compatible with Java 8. Sorry that it can't be as clean.
+        {
+            case "o":
+                mode = "osu";
+                break;
+            case "t":
+                mode = "taiko";
+                break;
+            case "c":
+                mode = "fruits";
+                break;
+            default:
+                mode = "mania";
+        }
 
         try
         {
